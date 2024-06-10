@@ -1,0 +1,112 @@
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+/* Theme styles */
+[data-theme="dark"] {
+    --bg-color: #202024;
+    --text-color: #EAC645;
+    --card-bg-color: #333;
+    --btn-color: #4F2EE8;
+    --btn-hover-color: #5a5757;
+    --ball-color:white;
+}
+
+[data-theme="light"] {
+    --bg-color: #f0f0f0;
+    --text-color: #202024;
+    --card-bg-color: #fff;
+    --btn-color: #4F2EE8;
+    --btn-hover-color: #EAC645;
+    --ball-color:black;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 90%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 200px;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Toggle switch styles */
+.header {
+    display: flex;
+    height: 8vh;
+    top: 0;
+    justify-content: flex-end;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #4F2EE8;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+i {
+    color: #eecd4a;
+}
+
+.checkbox-label .ball {
+    background-color: white;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
